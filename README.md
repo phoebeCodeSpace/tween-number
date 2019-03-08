@@ -1,6 +1,6 @@
 # tween-number
 
-> 数字缓动
+> [数字缓动](https://phoebecodespace.github.io/tween-number/)
 
 ## 属性
 
@@ -48,3 +48,6 @@ npm install tween-number --save-dev
 ```
 
 ## 示例
+
+在线查看[示例](https://phoebecodespace.github.io/tween-number/)
+查看示例[代码](https://github.com/phoebeCodeSpace/tween-number/blob/master/src/App.vue)
