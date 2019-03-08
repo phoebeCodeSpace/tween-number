@@ -1,0 +1,52 @@
+{
+  "name": "tween-number",
+  "version": "0.2.0",
+  "private": false,
+  "main": "dist/tween-number.umd.js",
+  "module": "dist/tween-number.esm.js",
+  "unpkg": "dist/tween-number.min.js",
+  "browser": {
+    "./sfc": "lib/tween-number.vue"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:example": "vue-cli-service build",
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd --file dist/tween-number.umd.js",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es --file dist/tween-number.esm.js",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife --file dist/tween-number.min.js"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "license": "MIT",
+  "author": "silkshadow",
+  "dependencies": {
+    "vue": "^2.6.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "cross-env": "^5.2.0",
+    "minimist": "^1.2.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^4.6.2",
+    "vue": "^2.5.22",
+    "vue-template-compiler": "^2.5.22"
+  }
+}
