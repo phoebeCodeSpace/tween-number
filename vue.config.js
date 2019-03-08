@@ -1,5 +1,7 @@
 module.exports = {
-  outputDir: 'example',
+  // outputDir: 'example',
+  outputDir: 'docs',
+  publicPath: 'tween-number',
   pages: {
     index: {
       // page 的入口
